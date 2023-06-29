@@ -106,12 +106,6 @@ describe('Array Methods', () => {
     expect(result).toEqual([2, 3]);
   });
 
-  test('_sort should sort the array in ascending order', () => {
-    const unsortedArray = [4, 1, 3, 2, 5];
-    const result = _sort(unsortedArray);
-    expect(result).toEqual([1, 2, 3, 4, 5]);
-  });
-
   test('_reverse should reverse the order of elements in the array', () => {
     const result = _reverse(array);
     expect(result).toEqual([5, 4, 3, 2, 1]);

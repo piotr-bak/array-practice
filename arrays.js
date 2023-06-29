@@ -95,15 +95,22 @@ function _slice (array) {
 
 function _reverse (array) {
 
+}
 
+function _forEach (array, callback) {
+  for (let i = 0; i < array.length; ++i) {
+    array[i] = callback(array[i]);
+  }
+  return array;
 };
-function _forEach (array) {
 
-};
-
-function _push (array) {
-
-};
+function _push (array, ...elements) {
+  const initialLength = array.length;
+  for (let i = 0; i < elements.length; i++) {
+    array[initialLength + i] = elements[i];
+  }
+  return array.length;
+}
 
 function _pop (array) {
 
@@ -117,7 +124,7 @@ function _unshift (array) {
 
 };
 
-function _join (array) {
+function _join (array1, array2) {
 
 };
 

@@ -89,48 +89,100 @@ function _reduce (array, callback, initialValue) {
   return accumulator;
 };
 
-function _slice (array) {
-
+function _slice (array, start, end) {
+  const result = [];
+  const checkStart = () => {
+    if (start < 0) start += array.length;
+  }
+  const checkEnd = () => {
+    if (end < 0) end += array.length;
+    if (end < -array.length) end = 0;
+    if (end >= array.length) end = array.length;
+    if (end < start) return [];
+  }
+  checkStart();
+  checkEnd();
+  for (let i = start; i < end; ++i) {
+    result[result.length] = array[i];
+  }
+  return result;
 };
 
 function _reverse (array) {
-
+  let temp = [];
+  for (let i = array.length; i >= 0; --i) {
+    temp[temp.length] = array[i];
+  }
 }
+
 
 function _forEach (array, callback) {
   for (let i = 0; i < array.length; ++i) {
-    array[i] = callback(array[i]);
+    callback(array[i]);
   }
-  return array;
 };
 
-function _push (array, ...elements) {
-  const initialLength = array.length;
-  for (let i = 0; i < elements.length; i++) {
-    array[initialLength + i] = elements[i];
+function _push (array, ...items) {
+  const initialLen = array.length;
+  for (let i = 0; i < items.length; ++i) {
+    array[initialLen + i] = items[i];
   }
   return array.length;
 }
 
 function _pop (array) {
-
+  if (!array || array.length === 0) return;
+  const lastEl = array[array.length - 1];
+  array.length -= 1;
+  return lastEl;
 };
 
 function _shift (array) {
-
+  if (!array || array.length === 0) return;
+  const firstEl = array[0];
+  for (let i = 0; i < array.length; ++i) {
+    array[i] = array[i + 1];
+  }
+  array.length -= 1;
+  return firstEl;
 };
 
-function _unshift (array) {
-
+function _unshift (array, ...items) {
+  const newLen = array.length + items.length;
+  const offset = newLen - array.length;
+  for (let i = array.length - 1; i >= 0; --i) {
+    array[i + offset] = array[i];
+  }
+  for (let i = 0; i < items.length; ++i) {
+    array[i] = items[i]
+  }
+  return array.length;
 };
 
-function _join (array1, array2) {
+function _join (array, separator) {
+  let result = '';
+  for (let i = 0; i < array.length; ++i) {
+    result += array[i];
 
+    if (i !== array.length - 1) {
+      result += separator;
+    }
+  }
+  return result;
 };
 
-function _concat (array) {
-
-};
+function _concat (...arrays) {
+  const result = [];
+  let length = 0;
+  for (let i = 0; i < arrays.length; i++) {
+    const currentArray = arrays[i];
+    for (let j = 0; j < currentArray.length; j++) {
+      result[length] = currentArray[j];
+      length++;
+    }
+  }
+  return result;
+}
 
 module.exports = {
   _indexOf,

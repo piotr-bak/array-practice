@@ -5,15 +5,9 @@ describe('Array Methods', () => {
     array = [1, 2, 3, 4, 5];
   });
 
-  // Manipulative Methods
+  // Transformation Methods
 
   // Mutative Methods
-
-  test('_push should add elements to the end of the array and return the new length', () => {
-    const length = _push(array, 6, 7);
-    expect(length).toBe(7);
-    expect(array).toEqual([1, 2, 3, 4, 5, 6, 7]);
-  });
 
   test('_pop should remove the last element from the array and return it', () => {
     const lastElement = _pop(array);
@@ -37,6 +31,12 @@ describe('Array Methods', () => {
   test('_shift should return undefined for an empty array', () => {
     const firstElement = _shift([]);
     expect(firstElement).toBeUndefined();
+  });
+
+  test('_push should add elements to the end of the array and return the new length', () => {
+    const length = _push(array, 6, 7);
+    expect(length).toBe(7);
+    expect(array).toEqual([1, 2, 3, 4, 5, 6, 7]);
   });
 
   test('_unshift should add elements to the beginning of the array and return the new length', () => {

@@ -204,4 +204,8 @@ module.exports = {
   _unshift,
   _join,
   _concat,
+  _isArray,
+  _length,
+  _fill,
+  _copyWithin,
 }

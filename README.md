@@ -15,11 +15,18 @@ mark - or not. Let's dive in!
 
 To get started, make sure you have [Node.js](https://nodejs.org/) installed on your machine. This project uses [Jest](https://jestjs.io/) as the testing framework.
 
-1. Clone this repository to your local machine:git clone <git clone https://github.com/piotr-bak/array-practice>
-
-2. Navigate to the project directory:cd array-methods-implementation
-
-3. Install the project dependencies:npm install
+1. Clone this repository to your local machine: 
+```javascript
+git clone https://github.com/piotr-bak/array-practice
+```
+2. Navigate to the project directory:
+```javascript
+cd array-methods-implementation
+```
+3. Install the project dependencies:
+```javascript
+npm install
+```
 
 ###
 

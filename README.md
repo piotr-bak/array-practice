@@ -7,8 +7,7 @@ As [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) once said,
 So, let's create some array methods!
 The goal of this exercise is to implement methods for array analysis and
 manipulation that are analogous to the built-in JavaScript methods. This
-repository is intended as a comfortable starting point, providing you with the
-necessary structure and test suites to verify if your implementations hit the
+repository is intended as a comfortable starting point, providing the necessary structure and test suites to verify whether your implementations hit the
 mark - or not. Let's dive in!
 
 ### Installation

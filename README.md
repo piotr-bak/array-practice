@@ -7,19 +7,25 @@ As [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) once said,
 So, let's create some array methods!
 The goal of this exercise is to implement methods for array analysis and
 manipulation that are analogous to the built-in JavaScript methods. This
-repository is intended as a comfortable starting point, providing you with the
-necessary structure and test suites to verify if your implementations hit the
+repository is intended as a comfortable starting point, providing the necessary structure and test suites to verify whether your implementations hit the
 mark - or not. Let's dive in!
 
 ### Installation
 
 To get started, make sure you have [Node.js](https://nodejs.org/) installed on your machine. This project uses [Jest](https://jestjs.io/) as the testing framework.
 
-1. Clone this repository to your local machine:git clone <git clone https://github.com/piotr-bak/array-practice>
-
-2. Navigate to the project directory:cd array-methods-implementation
-
-3. Install the project dependencies:npm install
+1. Clone this repository to your local machine: 
+```javascript
+git clone https://github.com/piotr-bak/array-practice
+```
+2. Navigate to the project directory:
+```javascript
+cd array-methods-implementation
+```
+3. Install the project dependencies:
+```javascript
+npm install
+```
 
 ###
 

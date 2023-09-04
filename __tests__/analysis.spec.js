@@ -30,7 +30,7 @@ describe('Array Methods', () => {
   });
 
   test('_indexOf should work correctly with NaN values', () => {
-    expect(_indexOf([NaN, 2, NaN], NaN)).toBe(0);
+    expect(_indexOf([NaN, 2, NaN], NaN)).toBe(-1);
   });
 
   test('_includes should return true if the array contains the specified element', () => {

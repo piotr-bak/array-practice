@@ -1,3 +1,12 @@
+const {
+  _indexOf,
+  _includes,
+  _every,
+  _some,
+  _find,
+  _findIndex,
+} = require('../analysis');
+
 describe('Array Methods', () => {
   let array;
 

@@ -1,3 +1,25 @@
+const {
+  _pop,
+  _shift,
+  _push,
+  _unshift,
+  _splice,
+  _filter,
+  _concat,
+  _join,
+  _forEach,
+  _map,
+  _reduce,
+  _flat,
+  _slice,
+  _reverse,
+  _sort,
+  _toSorted,
+  _toReversed,
+  _toSpliced,
+  _with,
+} = require('../transformation');
+
 describe('Array Methods', () => {
   let array;
 

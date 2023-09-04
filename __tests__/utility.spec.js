@@ -1,3 +1,11 @@
+const {
+  _toString,
+  _isArray,
+  _length,
+  _fill,
+  _copyWithin,
+} = require('../utility');
+
 describe('Array Methods', () => {
   let array;
 
